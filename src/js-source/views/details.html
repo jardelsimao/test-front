@@ -22,9 +22,11 @@
     </div>
       <md-card class="fade" ng-show="setLoadOff===true">
          <img ng-src="{{user.avatar_url}}" class="md-card-image" alt="{{user.name}}">
-         <md-card-content>
+         <md-card-content style="text-align: center">
            <h1>{{user.name}}</h1>
            <p>jardelsimao@gmail.com</p>
+           <p>{{user.bio}}</p>
+           <p>{{user.location}}</p>
          </md-card-content>
         </md-card>
     </md-content>

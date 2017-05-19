@@ -1,9 +1,7 @@
-Nome Completo: Luiz Boça
+Nome Completo: Jardel Simão
 
-E-mail: luiz.boca@clubedosminigameiros.com.br
+E-mail: jardelsimao@gmail.com
 
-Linkedin: http://linkedin.com/luiz.boca
+Linkedin: https://www.linkedin.com/in/jardel-simao
 
-Telefone: (44) 44444-4444 
-
-Portfólio (Opicional): clubedosminigameiros.com.br/portfolio
+Telefone: (48) 99835-7482

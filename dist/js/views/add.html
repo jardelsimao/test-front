@@ -1,0 +1,63 @@
+<div layout="row" layout-align="left center">
+  <div flex-gt-sm="40" flex-gt-md="40" flex-sm="60" flex="100" >
+    <md-content flex layout-padding>
+
+      <md-toolbar>
+        <div class="md-toolbar-tools">
+          <md-truncate>Adicionar contato</md-truncate>
+          <span flex></span>
+          <md-button class="md-fab md-mini" ng-click="List()">
+            <i class="material-icons">first_page</i>
+          </md-button>
+        </div>
+      </md-toolbar>
+
+      <form name="chalengeForm" class="md-whiteframe-1dp">
+
+        <div layout="row">
+          <md-input-container flex="100">
+            <label>Nome</label>
+            <input required name="name" ng-model="contact.name">
+            <div ng-messages="chalengeForm.name.$error">
+              <div ng-message="required">É necessário digitar um nome.</div>
+            </div>
+          </md-input-container>
+        </div>
+
+        <md-input-container class="md-block" flex="100">
+          <label>Email</label>
+          <input required type="email" name="email" ng-model="contact.email"
+                 minlength="10" maxlength="100" ng-pattern="/^.+@.+\..+$/" />
+
+          <div ng-messages="chalengeForm.email.$error" role="alert">
+            <div ng-message-exp="['required', 'minlength', 'maxlength', 'pattern']">
+              É necessário digitar um email.
+            </div>
+          </div>
+        </md-input-container>
+        <div layout="row">
+          <md-input-container flex="70">
+            <label>Twitter</label>
+            <input name="twitter" ng-model="contact.twitter">
+          </md-input-container>
+        </div>
+        <div layout="row">
+          <md-input-container flex="70">
+            <label>Telefone</label>
+            <input name="phone" ng-model="contact.phone" ng-pattern="/^[(][0-9]{2}[)] [0-9]{4,5}-[0-9]{4}$/" />
+
+            <div class="hint" ng-show="showHints">(###) ###-####</div>
+
+            <div ng-messages="chalengeForm.phone.$error" ng-hide="showHints">
+              <div ng-message="pattern">(##) ####-#### - Formato válido (8-9 dígitos).</div>
+            </div>
+          </md-input-container>
+        </div>
+        <div>
+          <md-button type="submit" class="md-raised md-primary" ng-click="addContact(contact)">Salvar</md-button>
+        </div>
+
+      </form>
+    </md-content>
+  </div>
+</div>

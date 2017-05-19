@@ -1,0 +1,32 @@
+<div layout="row" layout-align="left center" >
+  <div class="app_content">
+    <md-content flex layout-padding class="appbackground">
+      <md-toolbar>
+        <div layout="row" layout-align="space-between center">
+            <div class="md-toolbar-tools" style="margin-right:12px">
+              <i class="fa fa-signal fa-minor" aria-hidden="true"></i><i class="fa fa-wifi fa-minor" aria-hidden="true"></i>
+            </div>
+            <div class="md-toolbar-tools" style="margin-right:45px; padding:0; margin-left:35px">
+              <span class="fa-minor">{{horaHeader}}</span>
+            </div>
+            <div class="md-toolbar-tools text-right" >
+              <span  class="fa-minor">95%</span><i class="fa fa-battery-three-quarters fa-minor" aria-hidden="true"></i>
+            </div>
+        </div>
+    </md-toolbar>
+    <button class="md-fab md-mini md-primary md-button md-ink-ripple txt-white" type="button" ng-click="backHome()">
+      <i class="fa fa-arrow-left" aria-hidden="true"></i>
+    </button>
+    <div ng-hide="setLoadOff" class="fade text-center">
+      <i class="fa fa-spinner fa-pulse fa-5x fa-fw txt-white"></i>
+    </div>
+      <md-card class="fade" ng-show="setLoadOff===true">
+         <img ng-src="{{user.avatar_url}}" class="md-card-image" alt="{{user.name}}">
+         <md-card-content>
+           <h1>{{user.name}}</h1>
+           <p>jardelsimao@gmail.com</p>
+         </md-card-content>
+        </md-card>
+    </md-content>
+  </div>
+</div>

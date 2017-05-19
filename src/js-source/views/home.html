@@ -1,0 +1,29 @@
+<div layout="row" layout-align="left center" >
+  <div class="app_content">
+    <md-content flex layout-padding class="appbackground">
+      <md-toolbar class="md-primary-100">
+        <div layout="row" layout-align="space-between center">
+            <div class="md-toolbar-tools">
+              <i class="fa fa-signal fa-minor" aria-hidden="true"></i><i class="fa fa-wifi fa-minor" aria-hidden="true"></i>
+            </div>
+            <div class="md-toolbar-tools" style="margin-right:45px; padding:0; margin-left:35px; min-width: 60px;">
+              <span class="fa-minor">{{date.header}}</span>
+            </div>
+            <div class="md-toolbar-tools text-right" >
+              <span  class="fa-minor">95%</span><i class="fa fa-battery-three-quarters fa-minor" aria-hidden="true"></i>
+            </div>
+        </div>
+    </md-toolbar>
+        <div class="row text-center txt-size3em txt-white" style="margin-top: 30px">
+            {{date.horaContent}}
+        </div>
+        <div class="row text-center txt-size0_89em txt-white" style="margin-top: -19px">
+            {{date.diaSemana}}, {{date.dia}} de {{date.mes}}
+        </div>
+         <section layout="row" layout-sm="column" layout-align="center center" class="homeBtn" layout-wrap>
+            <md-button class="md-raised md-primary-100" style="border-radius:5px; box-shadow:none" ng-click="goDetails()">Desbloquear</md-button>
+         </section>
+    </md-content>
+    <a href="javascript:;"><i class="fa fa-camera fa-litleBiger txt-white" aria-hidden="true"></i></a>
+  </div>
+</div>
